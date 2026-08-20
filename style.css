@@ -672,11 +672,18 @@ HERO
     margin: auto;
     border-radius: 50%;
     padding: 15px;
+    /* 
+       New Allocation:
+       0-40%: Liquidity (Blue)
+       40-80%: Marketing (Purple)
+       80-90%: Ecosystem (Cyan)
+       90-100%: Contributors (Light Blue)
+    */
     background: conic-gradient(
-        #00d4ff 0% 60%,      /* Liquidity */
-        #00ffbf 60% 85%,     /* Ecosystem */
-        #9b5cff 85% 95%,     /* Marketing */
-        #4facfe 95% 100%     /* Contributors */
+        #00d4ff 0% 40%,      /* Liquidity */
+        #9b5cff 40% 80%,     /* Marketing */
+        #00ffbf 80% 90%,     /* Ecosystem */
+        #4facfe 90% 100%     /* Contributors */
     );
     display: flex;
     align-items: center;
