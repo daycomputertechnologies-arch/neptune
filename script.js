@@ -40,3 +40,35 @@ if (menuToggle && nav) {
         nav.classList.toggle("active");
     });
 }
+
+// Copy Contract Address
+function copyCA() {
+    var text = document.getElementById("ca").innerText;
+    navigator.clipboard.writeText(text).then(function() {
+        // Change button text to "Copied!"
+        var btn = document.querySelector('.copyBtn');
+        var originalText = btn.innerText;
+        btn.innerText = "✅ Copied!";
+        btn.style.background = "#00ffbf";
+        setTimeout(function() {
+            btn.innerText = originalText;
+            btn.style.background = "linear-gradient(135deg, #00d4ff, #2877ff)";
+        }, 2000);
+    }).catch(function() {
+        // Fallback for older browsers or local testing
+        var textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        var btn = document.querySelector('.copyBtn');
+        var originalText = btn.innerText;
+        btn.innerText = "✅ Copied!";
+        btn.style.background = "#00ffbf";
+        setTimeout(function() {
+            btn.innerText = originalText;
+            btn.style.background = "linear-gradient(135deg, #00d4ff, #2877ff)";
+        }, 2000);
+    });
+}

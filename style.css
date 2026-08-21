@@ -1099,3 +1099,84 @@ HERO
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-18px); }
 }
+// Copy Contract Address
+function copyCA() {
+    var text = document.getElementById("ca").innerText;
+    navigator.clipboard.writeText(text).then(function() {
+        alert("Contract address copied!");
+    });
+}
+/* Contract Address Box */
+.contractBox {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 15px;
+    padding: 15px 20px;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.contractBox code {
+    color: #5fdcff;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.copyBtn {
+    background: linear-gradient(135deg, #00d4ff, #2877ff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.copyBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 170, 255, .4);
+}
+/* Contract Address Box */
+.contractBox {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 15px;
+    padding: 15px 20px;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.contractBox code {
+    color: #5fdcff;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.copyBtn {
+    background: linear-gradient(135deg, #00d4ff, #2877ff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.copyBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 170, 255, .4);
+}
